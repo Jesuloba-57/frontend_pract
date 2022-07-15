@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, flash, redirect
+from flask import Flask, render_template, url_for, flash, redirect, url_for
 
 from forms import RegistrationForm
 
@@ -26,7 +26,7 @@ class User(db.Model):
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', subtitle='Home Page', text='This is the home page')
+    return render_template('home.html', subtitle='Find Upcoming Events in your City', text="Welcome! This is a free Event checker, but you Need to Register before your can use our services. Select 'Register', in the above menu to continue!")
 
 @app.route("/second_page")
 def second_page():
